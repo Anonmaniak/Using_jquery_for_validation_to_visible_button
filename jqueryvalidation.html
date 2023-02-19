@@ -1,0 +1,50 @@
+<!--Lets Start!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlaidation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <input type="submit" name="login" id="tosubmit"> <!---Created a button-->
+    <div id="toopen">  <!--creating a division-->
+        <br>
+        Username: <input type="text" name="user" id="user"/><br>
+        Password: <input type="password" name="pass" id="pass"/> <br>
+        <input type="submit" name="submit" id="submit"/>
+    </div>
+    <!--creating a button which will be visible after validation-->
+    <button id="tovisible" style="display: none;">Visible</button>
+
+    <!--Now the script part-->
+    <script>
+        var x = document.getElementById("pass").type = "text"; // I added this function to show the password to yall :)
+  
+        // using JQuery as script can be used instead of javascript
+        $(document).ready(function(){        
+            $('#toopen').hide() // to hide the form 
+            $('#tosubmit').click(function(){
+                $('#toopen').show()
+            })
+            $('#submit').click(function(){
+                var username = $('#user').val();  // taking those username and password from div to #user and #pass
+                var password = $('#pass').val(); 
+
+                // condition
+                if(username == "Rupesh" & password == "123456"){  // you can put anything you want instead of Rupesh and 123456
+                    $('#tovisible').show()    // This is from ....
+                }
+                else{
+                    document.write("Wrong Username/Password!")
+                }
+            })
+        })
+
+        // For anyproblem comment down i will try to ans and solve :)
+    </script>
+</body>
+</html>
